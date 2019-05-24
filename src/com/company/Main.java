@@ -8,29 +8,135 @@ public class Main {
 
     public static void main(String[] args) {
 
-        printSquareStar(8);
+        System.out.println(getBucketCount(0.75,0.75,0.5,0));
 
     }
 
-    public static void printSquareStar(int number) {
+    public static int getBucketCount (double width, double height, double areaPerBucket, int extraBuckets){
 
-        int vertical = 1;
-        int horizontal = 1;
+        if(width<=0 || height<=0 || areaPerBucket<=0 || extraBuckets <0 )
+        return -1;
+    else{
+        double areaToCover = width * height;
+        double areaLeft;
+        double bucketsToBuy;
 
-        while (number > vertical) {
+        areaLeft = areaToCover-(areaPerBucket*extraBuckets);
+        bucketsToBuy = areaLeft/areaPerBucket;
 
-            while (number > horizontal) {
-                System.out.println("*");
-                horizontal++;
-            }
+        return (int)Math.ceil(bucketsToBuy);
 
-            System.out.print("*");
-            vertical++;
+
+
+        }
+
+    }
+    public static int getBucketCount(double width, double height, double areaPerBucket){
+        if(width<=0 || height<=0 || areaPerBucket<=0 )
+            return -1;
+        else{
+            double areaToCover = width * height;
+
+            double bucketsToBuy;
+
+
+            bucketsToBuy = areaToCover/areaPerBucket;
+
+            return (int)Math.ceil(bucketsToBuy);
+
+
+
+        }
+    }
+    public static int getBucketCount(double area,double areaPerBucket){
+
+        if(area<=0 || areaPerBucket<=0)
+            return -1;
+        else {
+
+
+            double bucketsToBuy;
+            bucketsToBuy = area / areaPerBucket;
+            return (int) Math.ceil(bucketsToBuy);
         }
     }
 
 
+
+
+
+
+
 }
+//    public static void inputThenPrintSumAndAvarange(){
+//        Scanner scanner =new Scanner(System.in);
+//        int newValue;
+//        int suma = 0;
+//        int licznik = 0;
+//
+//        while(true){
+//
+//            if(scanner.hasNextInt()){
+//            newValue = scanner.nextInt();
+//            suma = suma+newValue;
+//            licznik++;
+//            }else
+//                break;
+//
+//        }System.out.println("SUM = "+ suma+" AVG ="+Math.round((double)suma/licznik));
+//
+//
+//
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int number;
+//        int minNumber = 0;
+//        int maxNumber = 0;
+//
+//
+//        while(true) {
+//
+//            System.out.println("Ent3r the mfcking number");
+//            boolean sprawdzanko = scanner.hasNextInt();
+//
+//            if(sprawdzanko) {
+//                number = scanner.nextInt();
+//                if (maxNumber == 0 && minNumber == 0) {
+//                    maxNumber = number;
+//                    minNumber = number;
+//                }
+//                if (number > maxNumber)
+//                    maxNumber = number;
+//                if (number < minNumber)
+//                    minNumber = number;
+//                System.out.println("Maximun value = " + maxNumber);
+//                System.out.println("Minimum value = " + minNumber);
+//            }else break;
+//
+//        }
+//
+//
+//    }
+//}
 
 
 //    public static int getLargestPrime(int number) {
