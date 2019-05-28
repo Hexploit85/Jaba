@@ -8,66 +8,72 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(getBucketCount(0.75,0.75,0.5,0));
+        SimpleCalculator calculator = new SimpleCalculator();
 
-    }
-
-    public static int getBucketCount (double width, double height, double areaPerBucket, int extraBuckets){
-
-        if(width<=0 || height<=0 || areaPerBucket<=0 || extraBuckets <0 )
-        return -1;
-    else{
-        double areaToCover = width * height;
-        double areaLeft;
-        double bucketsToBuy;
-
-        areaLeft = areaToCover-(areaPerBucket*extraBuckets);
-        bucketsToBuy = areaLeft/areaPerBucket;
-
-        return (int)Math.ceil(bucketsToBuy);
+        calculator.setFirstNumber(1.0);
+        calculator.setSecondNumber(2.0);
+        System.out.println(calculator.getAdditionResult());
 
 
 
-        }
+    }}
 
-    }
-    public static int getBucketCount(double width, double height, double areaPerBucket){
-        if(width<=0 || height<=0 || areaPerBucket<=0 )
-            return -1;
-        else{
-            double areaToCover = width * height;
-
-            double bucketsToBuy;
-
-
-            bucketsToBuy = areaToCover/areaPerBucket;
-
-            return (int)Math.ceil(bucketsToBuy);
-
-
-
-        }
-    }
-    public static int getBucketCount(double area,double areaPerBucket){
-
-        if(area<=0 || areaPerBucket<=0)
-            return -1;
-        else {
-
-
-            double bucketsToBuy;
-            bucketsToBuy = area / areaPerBucket;
-            return (int) Math.ceil(bucketsToBuy);
-        }
-    }
-
-
-
-
-
-
-
-}
+//    public static int getBucketCount (double width, double height, double areaPerBucket, int extraBuckets){
+//
+//        if(width<=0 || height<=0 || areaPerBucket<=0 || extraBuckets <0 )
+//        return -1;
+//    else{
+//        double areaToCover = width * height;
+//        double areaLeft;
+//        double bucketsToBuy;
+//
+//        areaLeft = areaToCover-(areaPerBucket*extraBuckets);
+//        bucketsToBuy = areaLeft/areaPerBucket;
+//
+//        return (int)Math.ceil(bucketsToBuy);
+//
+//
+//
+//        }
+//
+//    }
+//    public static int getBucketCount(double width, double height, double areaPerBucket){
+//        if(width<=0 || height<=0 || areaPerBucket<=0 )
+//            return -1;
+//        else{
+//            double areaToCover = width * height;
+//
+//            double bucketsToBuy;
+//
+//
+//            bucketsToBuy = areaToCover/areaPerBucket;
+//
+//            return (int)Math.ceil(bucketsToBuy);
+//
+//
+//
+//        }
+//    }
+//    public static int getBucketCount(double area,double areaPerBucket){
+//
+//        if(area<=0 || areaPerBucket<=0)
+//            return -1;
+//        else {
+//
+//
+//            double bucketsToBuy;
+//            bucketsToBuy = area / areaPerBucket;
+//            return (int) Math.ceil(bucketsToBuy);
+//        }
+//    }
+//
+//
+//
+//
+//
+//
+//
+//}
 //    public static void inputThenPrintSumAndAvarange(){
 //        Scanner scanner =new Scanner(System.in);
 //        int newValue;
