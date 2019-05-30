@@ -1,32 +1,34 @@
 package com.company;
 
 public class SimpleCalculator {
+    private double firstNumber;
+    private double secondNumber;
 
-    double firstNumber;
-    double secondNumber;
-
-    public void getFirstNumber(){
-        return firstNumber;
+    public double getFirstNumber(){
+        return this.firstNumber;
     }
-    public void getSecondNumber(){
-        return secondNumber;
+    public double getSecondNumber(){
+        return this.secondNumber;
     }
-    public  setFirstNumber(double firstNumber){
-        this.firstNumber = setFirstNumber();
+    public void  setFirstNumber(double firstNumber){
+        this.firstNumber = firstNumber;
     }
-    public  setSecondNumber (double secondNumber){
-        this.secondNumber = setSecondNumber();
+    public void  setSecondNumber (double secondNumber){
+        this.secondNumber = secondNumber;
     }
-    public  getAdditionResult(){
+    public  double getAdditionResult(){
         return firstNumber+secondNumber;
     }
-    public  getSubstractionResult(){
-        return  secondNumber - firstNumber;
+    public  double getSubtractionResult(){
+        return  firstNumber - secondNumber;
     }
-    public  getMultiplicationResult(){
+    public  double getMultiplicationResult(){
         return  secondNumber * firstNumber;
     }
-    public  getDivisionResult(){
-        return  secondNumber / firstNumber;
+    public  double getDivisionResult(){
+        if (secondNumber == 0)
+            return 0;
+        else
+            return  firstNumber / secondNumber;
     }
 }

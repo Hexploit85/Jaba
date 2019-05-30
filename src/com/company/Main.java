@@ -10,9 +10,6 @@ public class Main {
 
         SimpleCalculator calculator = new SimpleCalculator();
 
-        calculator.setFirstNumber(1.0);
-        calculator.setSecondNumber(2.0);
-        System.out.println(calculator.getAdditionResult());
 
 
 
