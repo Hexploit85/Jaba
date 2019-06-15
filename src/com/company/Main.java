@@ -8,12 +8,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SimpleCalculator calculator = new SimpleCalculator();
+        Wall dupa = new Wall(1.125,-1.0);
+
+        System.out.println(dupa.getHeight());
+        System.out.println(dupa.getWidth());
 
 
 
-
-    }}
+    }
+}
 
 //    public static int getBucketCount (double width, double height, double areaPerBucket, int extraBuckets){
 //
