@@ -8,13 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75,4.0);
 
-        Point punkcik = new Point(6,5);
-        Point punkcik2 = new Point(3,1);
-
-        System.out.println(punkcik.Distance());
-        System.out.println(punkcik.Distance(2,2));
-        System.out.println(punkcik.Distance(punkcik2));
+        Calculator calculator = new Calculator(floor,carpet);
+        System.out.println(calculator.getTotalCost());
 
 
 
