@@ -8,10 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Wall dupa = new Wall(1.125,-1.0);
 
-        System.out.println(dupa.getHeight());
-        System.out.println(dupa.getWidth());
+        Point punkcik = new Point(6,5);
+        Point punkcik2 = new Point(3,1);
+
+        System.out.println(punkcik.Distance());
+        System.out.println(punkcik.Distance(2,2));
+        System.out.println(punkcik.Distance(punkcik2));
 
 
 

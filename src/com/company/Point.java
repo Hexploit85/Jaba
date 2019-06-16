@@ -2,8 +2,8 @@ package com.company;
 
 public class Point {
 
-    int x;
-    int y;
+    private int x;
+    private int y;
 
     public int getX() { return x; }
 
@@ -30,8 +30,17 @@ public class Point {
     }
 
 public double Distance(){
-        return Point()
+        return Math.sqrt((0-this.x)*(0-this.x)+(0-this.y)*(0-this.y));
 }
+public double Distance(int x, int y){
+        return Math.sqrt((x-this.x)*(x-this.x)+(y-this.y)*(y-this.y));
+}
+
+public double Distance(Point another ){
+    return Math.sqrt((another.x-this.x)*(another.x-this.x)+(another.y-this.y)*(another.y-this.y));
+    }
+
+
 
 
 
