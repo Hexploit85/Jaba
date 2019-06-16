@@ -1,18 +1,16 @@
 package com.company;
 
-import java.net.SocketOption;
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        Carpet carpet = new Carpet(3.5);
-        Floor floor = new Floor(2.75,4.0);
+        ComplexNumber one = new ComplexNumber(1.0,1.0);
+        ComplexNumber number = new ComplexNumber(2.5,-1.5);
+        one.add(1,1);
+        one.subtract(number);
 
-        Calculator calculator = new Calculator(floor,carpet);
-        System.out.println(calculator.getTotalCost());
+        System.out.println(one.getReal());
+        System.out.println(one.getImaginary());
 
 
 
