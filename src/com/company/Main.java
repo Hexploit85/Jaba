@@ -1,16 +1,16 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        ComplexNumber one = new ComplexNumber(1.0,1.0);
-        ComplexNumber number = new ComplexNumber(2.5,-1.5);
-        one.add(1,1);
-        one.subtract(number);
+    zbiornik.getIntegers(3);
+    zbiornik.printArray(zbiornik.zbior);
+    zbiornik.sortownik();
+    zbiornik.printArray(zbiornik.desort);
 
-        System.out.println(one.getReal());
-        System.out.println(one.getImaginary());
 
 
 
